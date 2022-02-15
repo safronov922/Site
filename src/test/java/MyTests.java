@@ -24,15 +24,17 @@ public class MyTests {
         // Open Index page
         driver.get(PATH);
         // Check hello message  shown
-        driver.findElement(By.id("header")).isDisplayed();
+        boolean isHelloMessageShown = driver.findElement(By.id("header")).isDisplayed();
+        Assert.assertTrue(isHelloMessageShown,"hello message don't show");
     }
 
     @Test
     public void BandsExistTest() {
         // Open Index page
         driver.get(PATH);
-        // Check bends  shown
-        driver.findElement(By.id("bands")).isDisplayed();
+        // Check bands  shown
+        boolean isBandsShown = driver.findElement(By.id("bands")).isDisplayed();
+        Assert.assertTrue(isBandsShown,"bands don't show");
     }
 
     @Test
